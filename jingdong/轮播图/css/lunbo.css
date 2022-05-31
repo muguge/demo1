@@ -1,0 +1,43 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.banner_img{
+    width:800%;
+    position: relative;
+}
+.banner_img  li{
+    width:12.5%;
+    float: left;
+}
+.banner_img li img{
+    display: block;
+    width: 100%;
+}
+.banner_index{
+    width: 128px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+}
+.banner_index li{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    float: left;
+    margin-left:10px;
+}
+.banner_index  li:first-child{
+    margin-left:0;
+}
+.banner_index  li.active{
+    background-color: #fff;
+}

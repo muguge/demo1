@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<link rel="stylesheet" href="css/2.css" type="text/css"/>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			/*轮播css*/
+			#scroll_wrap{
+				width: 100vw;
+				height: 13rem;
+				position: relative;
+				overflow: hidden;
+			}
+			#scroll li{
+				list-style: none;
+				width: 100vw;
+				height:13rem;
+				text-align: center;
+				color: #fff;
+				font-size: 32px;
+				position: absolute;
+				opacity: 0;
+			}
+			#scroll li img{width:100%;}
+			.scrollbanner ul .select{
+			   background:#cccccc; 
+			}
+			.scrollbanner ul{
+				display: flex;
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+			}
+			.scrollbanner ul li{
+				float: left;
+				list-style: none;
+				width: 0.7rem;
+				height: 0.7rem;
+				margin-left:0.7rem; 
+				border-radius: 0.7rem;
+				cursor: pointer;
+				border: 1px solid #ccc;
+			}
+			.btn{
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				cursor: pointer;
+				display: none;
+			}
+			.pre{
+				top: 45%;
+				left: 10px;
+			}
+			.next{
+				top: 45%;
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="img">
+				<!--轮播-->
+				<div id="scroll_wrap">
+				    <ul id="scroll">
+				        <li style="opacity:1"><img src="images/1.jpg"/></li>
+				        <li><img src="images/2.jpg"/></li>
+				        <li><img src="images/1.jpg"/></li>
+				        <li><img src="images/2.jpg"/></li>
+				    </ul>
+				    <div class="btn pre"><img class="arrow" id="al" src="images/arrowl.png" alt="prev" width="20" height="35"></div>
+					<div class="btn next"><img class="arrow" id="al" src="images/arrowr.png" alt="prev" width="20" height="35"></div>
+					<div class="scrollbanner">
+						<ul>
+							<li class="select"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="daohang clearfix">
+				<nav>
+					<ul>
+						<li>
+							<a href="">
+								<img src="images/nav_1.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_2.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_3.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_4.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_5.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_6.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_7.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nav_8.png"/>
+								<p>商品分类</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="miaosha clearfix">
+				<!--上面-->
+				<div class="top">
+					<!--左边-->
+					<div class="top_left">
+						<span class="icon">
+							<img src="images/seckill-icon.png"/></span>
+						<span class="zsms">掌上秒杀</span>
+						<div class="time">
+							<span>0</span>
+							<span>0</span>
+							<span class="mh">:</span>
+							<span>0</span>
+							<span>0</span>
+							<span class="mh">:</span>
+							<span>0</span>
+							<span>0</span>
+						</div>
+					</div>
+					<!--右边-->
+					<div class="more">
+						更多秒杀
+					</div>
+				</div>
+				<!--秒杀商品-->
+				<div class="shop">
+					<ul>
+						<li>
+							<a href="">
+								<img src="images/nv-fy.jpg"/>
+							</a>
+							<p>&yen;10.00</p>
+							<p>&yen;20.00</p>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nv-fy.jpg"/>
+							</a>
+							<p>&yen;10.00</p>
+							<p>&yen;20.00</p>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/nv-fy.jpg"/>
+							</a>
+							<p>&yen;10.00</p>
+							<p>&yen;20.00</p>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="chaoshi clearfix">
+				<p class="top">
+					<span class="red_block"></span>
+					<span>京东超市</span>
+				</p>
+				<div class="line"></div>
+				<div class="tupian">
+					<div class="left">
+						<img src="images/1.png"/>
+					</div>
+					<div class="right">
+						<p class="lines"><img src="images/2.png"/></p>
+						<p><img src="images/2.png"/></p>
+					</div>
+				</div>	
+			</div>
+			<div class="chaoshi clearfix">
+				<p class="top">
+					<span class="red_block"></span>
+					<span>京东超市</span>
+				</p>
+				<div class="line"></div>
+				<div class="tupian">
+					<div class="left">
+						<img src="images/1.png"/>
+					</div>
+					<div class="right">
+						<p class="lines"><img src="images/2.png"/></p>
+						<p><img src="images/2.png"/></p>
+					</div>
+				</div>	
+			</div>
+			<div class="chaoshi clearfix">
+				<p class="top">
+					<span class="red_block"></span>
+					<span>京东超市</span>
+				</p>
+				<div class="line"></div>
+				<div class="tupian">
+					<div class="left">
+						<img src="images/1.png"/>
+					</div>
+					<div class="right">
+						<p class="lines"><img src="images/2.png"/></p>
+						<p><img src="images/2.png"/></p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--轮播js-->
+	<script>
+	    var num = 0;
+		var timer = null;
+	        // 定时器
+		timer = setInterval(function () {
+	 
+			foo();
+		}, 2000);
+	 
+		function foo() {
+	        //图片变化
+			num++;
+			if (num == 4) {
+				num = 0;
+			}
+			if (num == -1) {
+				num = 3;
+			}
+	 
+			$("#scroll li").eq(num).stop().animate({ "opacity":1 }, 400,function(){
+	            $("#scroll li").eq(num).siblings().stop().animate({ "opacity":0 }, 400)
+	        });
+	        // 小图标变化
+			if (num == 4) {
+				$(".scrollbanner li").eq(0).addClass("select").siblings().removeClass("select");
+			} else {
+				$(".scrollbanner li").eq(num).addClass("select").siblings().removeClass("select");
+			}
+		}
+	 
+	    // 滑入轮播图按钮出现，轮播图静止，离开开启
+		$("#scroll_wrap").mouseover(function () {
+			clearInterval(timer);
+			$(".btn").show();
+		});
+		$("#scroll_wrap").mouseout(function () {
+			$(".btn").hide();
+			timer = setInterval(function () {
+	 
+				foo();
+			}, 2000);
+		});
+	 
+	    //前进后退按钮
+		$(".pre").click(function () {
+			num -= 2;
+			foo();
+		});
+		$(".next").click(function () {
+			foo();
+		});
+	    //点击小图标变化至图片
+	     $(".scrollbanner li").click(function(){
+	         var i=$(this).index();
+	         num =i-1;
+	         foo()
+	     })
+	</script>
+	</body>
+</html>
